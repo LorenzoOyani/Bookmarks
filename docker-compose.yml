@@ -1,0 +1,16 @@
+
+services:
+  db:
+    image: postgres:15     # Or specify a different version if needed
+    container_name: postgres_db
+    environment:
+      POSTGRES_DB: mydatabase       # Set your desired database name
+      POSTGRES_USER: myuser         # Set your desired username
+      POSTGRES_PASSWORD: mypassword # Set your desired password
+    ports:
+      - "5433:5432"                 # Exposes PostgreSQL on port 5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Persist data across restarts
+
+volumes:
+  postgres_data:

@@ -1,4 +1,8 @@
 package org.example.bookmaker.domain;
 
-public class UpdateBookmarksRequest {
+import lombok.Getter;
+import lombok.Setter;
+
+public record UpdateBookmarksRequest(long id, String title, String url) {
+
 }

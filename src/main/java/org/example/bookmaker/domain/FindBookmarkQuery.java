@@ -1,4 +1,3 @@
 package org.example.bookmaker.domain;
 
-public class FindBookmarkQuery {
-}
+public record FindBookmarkQuery(int pageNo, int pageSize) {}

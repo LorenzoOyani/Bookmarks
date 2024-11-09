@@ -1,10 +1,9 @@
-package org.example.bookmaker;
+package org.example.bookmaker.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
 import org.springframework.web.ErrorResponseException;
 
-import java.awt.print.Book;
 import java.net.URI;
 import java.time.Instant;
 

@@ -1,7 +1,4 @@
-package org.example.bookmaker;
-
-import lombok.Getter;
-import lombok.Setter;
+package org.example.bookmaker.domain;
 
 import java.time.Instant;
 
@@ -11,4 +8,15 @@ public record BookmarkDTO(
         String url,
         Instant createdAt
 ) {
+
+
+
+    static BookmarkDTO from(Bookmark bookmark) {
+        return new BookmarkDTO(
+                bookmark.getId(),
+                bookmark.getTitle(),
+                bookmark.getUrl(),
+                bookmark.getCreatedAt()
+        );
+    }
 }
